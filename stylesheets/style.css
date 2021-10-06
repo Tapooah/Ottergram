@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'lakeshore';
+    src: url("fonts/LAKESHOR-webfont.ttf") format("truetype"),
+    url("fonts/LAKESHOR-webfont.woff") format("woff"),
+    url("fonts/LAKESHOR-webfont.eot") format("embedded-opentype"),
+    url("fonts/LAKESHOR-webfont.svg") format("svg");
+
+}
+
+@font-face {
+    font-family: 'Airstream';
+    src: url("fonts/Airstream-webfont.ttf") format("truetype"),
+    url("fonts/Airstream-webfont.woff") format("woff"),
+    url("fonts/Airstream-webfont.eot") format("embedded-opentype"),
+    url("fonts/Airstream-webfont.svg") format("svg");
+
+}
+
+.thumbnail_title {
+    font-size: 25px;
+    color: #7efff3;
+    background: blueviolet;
+    display: block;
+}
+
+.thumbnail_image {
+    display: block;
+    width: 100%;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.thumbnail_list {
+    list-style: none;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex: 0 1 auto;
+    order: 2;
+
+}
+
+.hidden_details .thumbnail_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.thumbnail_item {
+    border: 2px solid rgb(100% 100% 100%);
+    border: 2px solid rgba(100% 100% 100% 0.8);
+    min-width: 128px;
+    max-width: 128px;
+    display: inline-block;
+    transition: transform 100ms;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.hidden_details .thumbnail_item {
+    max-width: 80%;
+}
+
+.thumbnail_item:hover {
+    transform: scale(1.2);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: cadetblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_text {
+    font-family: lakeshore;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    background: blanchedalmond;
+}
+
+.detail_image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+.hidden_details .detail_image_container {
+    display: none;
+}
+
+.detail_image {
+    width: 100%
+}
+
+.detail_image_title {
+    font-family: Airstream;
+    font-size: 60px;
+    color: white;
+    text-shadow: black 1px 2px 9px;
+    position: absolute;
+    bottom: -30px;
+    left: -25px;
+}
+
+.main_content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_title {
+    flex: 0 1 auto;
+}
+
+.detail_image_frame {
+    text-align: center;
+    position: relative;
+    transition: 1000ms ease-in;
+}
+
+@media all and (min-width: 800px) {
+    .main_content {
+        flex-direction: row;
+    }
+
+    .thumbnail_list {
+        flex-direction: column;
+        order: 0;
+        /*margin-top: 0;*/
+    }
+
+    .thumbnail_item {
+        max-width: 250px;
+        min-width: 250px;
+        /*max-height: ;*/
+    }
+
+    .thumbnail_item + .thumbnail_item {
+        margin-top: 20px;
+    }
+
+    .is_tiny {
+        transform: scale(0.001);
+        transition: 0ms;
+    }
+}
+
+
+
+
+
+
+
+
+
